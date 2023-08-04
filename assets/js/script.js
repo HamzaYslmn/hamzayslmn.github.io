@@ -121,7 +121,7 @@ const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
 
 const messageInput = document.querySelector('textarea[name="message"]');
-const fullName = document.querySelector('input[name="fullName"]').value.trim();
+const fullName = document.querySelector('textarea[name="fullName"]');
 
 // Enable send message button
 formBtn.removeAttribute('disabled');
