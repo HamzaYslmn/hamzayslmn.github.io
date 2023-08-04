@@ -862,7 +862,7 @@ main {
 }
 
 .skill-progress-fill {
-  background: var(--text-gradient-yellow);
+  background: linear-gradient(to right, red, green);
   height: 100%;
   border-radius: inherit;
 }
