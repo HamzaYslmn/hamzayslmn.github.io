@@ -125,15 +125,18 @@ const fullNameInput = document.querySelector('input[name="fullname"]'); // Chang
 
 const sendBtn = document.querySelector('.form-btn');
 const sendText = document.getElementById('sendText');
+const mailIcon = document.getElementById('mailIcon');
 // Enable send message button
 formBtn.removeAttribute('disabled');
 
 sendBtn.addEventListener('mouseover', () => {
   sendText.textContent = 'Gmail Redirect';
+  mailIcon.style.display = 'inline';
 });
 
 sendBtn.addEventListener('mouseout', () => {
   sendText.textContent = 'Send Message';
+  mailIcon.style.display = 'none';
 });
 
 // Function to handle form submission
