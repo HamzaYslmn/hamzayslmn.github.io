@@ -144,7 +144,7 @@ form.addEventListener('submit', function (event) {
   // burayı güncelle
   const emailBody = encodeURIComponent(message);
   const emailBodyTitle = encodeURIComponent(fullName);
-  const emailLink = `https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&su=From+Website&to=resmiyslmn@gmail.com&body=${emailBodyTitle}%0A-%0A%0A${emailBody}`;
+  const emailLink = `https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&su=Message+From+Website&to=resmiyslmn@gmail.com&body=${emailBodyTitle}%0A-%0A%0A${emailBody}`;
   
   // Open the link in a new tab
   window.open(emailLink, '_blank');
