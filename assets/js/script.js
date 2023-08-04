@@ -121,6 +121,7 @@ const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
 
 const messageInput = document.querySelector('textarea[name="message"]');
+const fullName = document.querySelector('input[name="fullName"]').value.trim();
 
 // Enable send message button
 formBtn.removeAttribute('disabled');
@@ -131,6 +132,7 @@ form.addEventListener('submit', function (event) {
   
   // Get the message value from the input field
   const message = messageInput.value.trim();
+  const title = fullName.value.trim();
   
   // If the message is empty, show "something" text
   if (message === '') {
@@ -140,7 +142,8 @@ form.addEventListener('submit', function (event) {
   
   // Prepare the email link with the message body
   const emailBody = encodeURIComponent(message);
-  const emailLink = `https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&su=From+Website&to=resmiyslmn@gmail.com&body=${emailBody}`;
+  const emailBodyTitle = encodeURIComponent(title);
+  const emailLink = `https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&su=From+Website&to=resmiyslmn@gmail.com&body=${emailBodyTitle}%0A-${emailBody}`;
   
   // Open the link in a new tab
   window.open(emailLink, '_blank');
