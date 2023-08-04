@@ -74,7 +74,7 @@
             <div class="contact-info">
               <p class="contact-title">Email</p>
 
-              <a href="mailto:hamzaysilmen@gmail.com" class="contact-link">hamzayesilmen@gmail.com</a>
+              <a href="mailto:resmiyslmn@gmail.com" class="contact-link">resmiyslmn@gmail.com</a>
             </div>
 
           </li>
@@ -816,7 +816,7 @@
           </ol>
 
         </section>
-          
+
         <section class="skill">
 
           <h3 class="h3 skills-title">My skills</h3>
@@ -886,7 +886,7 @@
       <article class="portfolio" data-page="portfolio">
 
         <header>
-          <h2 class="h2 article-title">Portfolio</h2>
+          <h2 class="h2 article-title">Portfolio (DEMO)</h2>
         </header>
 
         <section class="projects">
@@ -1126,7 +1126,7 @@
       <article class="blog" data-page="blog">
 
         <header>
-          <h2 class="h2 article-title">Blog</h2>
+          <h2 class="h2 article-title">Blog (DEMO)</h2>
         </header>
 
         <section class="blog-posts">
@@ -1330,27 +1330,49 @@
         </section>
 
         <section class="contact-form">
-
           <h3 class="h3 form-title">Contact Form</h3>
-
           <form action="#" class="form" data-form>
-
             <div class="input-wrapper">
               <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
               <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
             </div>
-
             <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
             <button class="form-btn" type="submit" disabled data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>
               <span>Send Message</span>
             </button>
-
           </form>
-
         </section>
+        
+        <script>
+          // Get references to the form elements
+          const form = document.querySelector('form');
+          const messageInput = document.querySelector('textarea[name="message"]');
+        
+          // Function to handle form submission
+          form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            
+            // Get the message value from the input field
+            const message = messageInput.value.trim();
+            
+            // If the message is empty, show "something" text
+            if (message === '') {
+              alert('something');
+              return;
+            }
+            
+            // Prepare the email link with the message body
+            const emailBody = encodeURIComponent(message);
+            const emailLink = `https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&su=From+Website&to=resmiyslmn@gmail.com&body=${emailBody}`;
+            
+            // Open the link in a new tab
+            window.open(emailLink, '_blank');
+            
+            // Clear the message input field
+            messageInput.value = '';
+          });
+        </script>
 
       </article>
 
