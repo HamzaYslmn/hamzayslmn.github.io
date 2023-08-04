@@ -10,5 +10,5 @@
 
   <!-- "H" Letter -->
   <text x="38%" y="55%" font-size="180" fill="url(#paint0_linear_13_13)" text-anchor="middle" dominant-baseline="middle">H</text>
-  <text x="72%" y="64%" font-size="80" fill="url(#paint0_linear_13_13)" text-anchor="middle" dominant-baseline="middle">Y</text>
+  <text x="72%" y="63%" font-size="90" fill="url(#paint0_linear_13_13)" text-anchor="middle" dominant-baseline="middle">Y</text>
 </svg>
