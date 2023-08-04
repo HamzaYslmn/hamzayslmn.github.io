@@ -1,2 +1,0 @@
-# hamzayslmn.github.io
-Web
