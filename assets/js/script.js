@@ -120,46 +120,34 @@ const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
 
-//// add event to all form input field
-//for (let i = 0; i < formInputs.length; i++) {
-//  formInputs[i].addEventListener("input", function () {
-//
-//    // check form validation
-//    if (form.checkValidity()) {
-//      formBtn.removeAttribute("disabled");
-//    } else {
-//      formBtn.setAttribute("disabled", "");
-//    }
-//
-//  });
-//}
+const messageInput = document.querySelector('textarea[name="message"]');
 
-  const messageInput = document.querySelector('textarea[name="message"]');
+// Enable send message button
+formBtn.removeAttribute('disabled');
 
-  // Function to handle form submission
-  form.addEventListener('submit', function (event) {
-    event.preventDefault();
-    
-    // Get the message value from the input field
-    const message = messageInput.value.trim();
-    
-    // If the message is empty, show "something" text
-    if (message === '') {
-      alert('something');
-      return;
-    }
-    
-    // Prepare the email link with the message body
-    const emailBody = encodeURIComponent(message);
-    const emailLink = `https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&su=From+Website&to=resmiyslmn@gmail.com&body=${emailBody}`;
-    
-    // Open the link in a new tab
-    window.open(emailLink, '_blank');
-    
-    // Clear the message input field
-    messageInput.value = '';
-  });
-
+// Function to handle form submission
+form.addEventListener('submit', function (event) {
+  event.preventDefault();
+  
+  // Get the message value from the input field
+  const message = messageInput.value.trim();
+  
+  // If the message is empty, show "something" text
+  if (message === '') {
+    alert('something');
+    return;
+  }
+  
+  // Prepare the email link with the message body
+  const emailBody = encodeURIComponent(message);
+  const emailLink = `https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&su=From+Website&to=resmiyslmn@gmail.com&body=${emailBody}`;
+  
+  // Open the link in a new tab
+  window.open(emailLink, '_blank');
+  
+  // Clear the message input field
+  messageInput.value = '';
+});
 
 
 // page navigation variables
