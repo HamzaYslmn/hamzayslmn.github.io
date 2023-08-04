@@ -3,22 +3,22 @@ vCard - Personal Portfolio
 # sidebar
 
 alt = Richard hanrick
-Richard hanrick
-Web developer
+Hamza Yeşilmen
+Mechatronics Engineer
 
 Show Contacts
 
 Email
-richard@example.com
+hamzayesilmen@gmail.com
 
 Phone
-+1 (213) 352-2795
++90 (507) 000-0000
 
 Birthday
-June 23, 1982
+January 4, 2000
 
 Location
-Sacramento, California, USA
+Ankara, Türkiye
 
 # navbar
 
@@ -42,16 +42,16 @@ I want to be an engineer involved in R&D, Project Design and Field Follow-up pro
 What i'm doing
 
 alt = design icon
-Web design
-The most modern and high-quality design made at a professional level.
+3D Modeling and Design
+3D modeling with Solidworks and Catia. Also 3D printing. 
 
 alt = Web development icon
-Web development
-High-quality development of sites at the professional level.
+Programming
+C and C++ programming languages for embedded systems. Also Python and Matlab for applications.
 
 alt = mobile app icon
 Mobile apps
-Professional development of applications for iOS and Android.
+Professional development of applications is Android.
 
 alt = camera icon
 Photography
