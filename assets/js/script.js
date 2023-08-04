@@ -121,7 +121,7 @@ const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
 
 const messageInput = document.querySelector('textarea[name="message"]');
-const fullName = document.querySelector('textarea[name="fullName"]');
+const fullNameInput = document.querySelector('input[name="fullname"]'); // Change textarea to input for fullName
 
 // Enable send message button
 formBtn.removeAttribute('disabled');
@@ -132,26 +132,26 @@ form.addEventListener('submit', function (event) {
   
   // Get the message value from the input field
   const message = messageInput.value.trim();
-  const title = fullName.value.trim();
+  const fullName = fullNameInput.value.trim(); // Change title to fullName
   
-  // If the message is empty, show "something" text
-  if (message === '') {
-    alert('something');
+  // If the message or fullName is empty, show an alert message
+  if (message === '' || fullName === '') { // Check if both message and fullName are filled
+    alert('Please fill in all the fields.');
     return;
   }
   
   // Prepare the email link with the message body
   const emailBody = encodeURIComponent(message);
-  const emailBodyTitle = encodeURIComponent(title);
-  const emailLink = `https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&su=From+Website&to=resmiyslmn@gmail.com&body=${emailBodyTitle}%0A-${emailBody}`;
+  const emailBodyTitle = encodeURIComponent(fullName);
+  const emailLink = `mailto:resmiyslmn@gmail.com?subject=From+Website&body=${emailBodyTitle}%0A-${emailBody}`;
   
   // Open the link in a new tab
   window.open(emailLink, '_blank');
   
-  // Clear the message input field
+  // Clear the input fields
   messageInput.value = '';
+  fullNameInput.value = '';
 });
-
 
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
