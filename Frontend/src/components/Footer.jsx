@@ -21,7 +21,7 @@ const Footer = () => {
   const socialLinks = [
     { href: 'https://github.com/HamzaYslmn', icon: '📱', title: 'GitHub' },
     { href: 'https://www.linkedin.com/in/hamzayslmn', icon: '💼', title: 'LinkedIn' },
-    { href: 'mailto:hello@hamza.dev', icon: '📧', title: 'Email' }
+    { href: 'mailto:resmiyslmn@gmail.com', icon: '📧', title: 'Email' }
   ]
 
   return (

@@ -10,7 +10,7 @@ const About = () => {
   const socialLinks = [
     { href: 'https://github.com/HamzaYslmn', icon: '📱' },
     { href: 'https://www.linkedin.com/in/hamzayslmn', icon: '💼' },
-    { href: 'mailto:hello@hamza.dev', icon: '📧' }
+    { href: 'mailto:resmiyslmn@gmail.com', icon: '📧' }
   ]
 
   const personalInfo = [
