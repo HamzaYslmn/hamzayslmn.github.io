@@ -1,112 +1,1570 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="tr" class="no-js">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact</title>
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hamza Yeşilmen — Senior Mechatronic Engineer & R&D Specialist</title>
+  <meta name="description" content="Senior Mechatronic Engineer specializing in embedded systems, AI/ML, IoT solutions, and full-stack development. Expert in C/C++, Python, computer vision, and cloud technologies." />
+  <meta name="keywords" content="Mechatronic Engineer, Embedded Systems, AI, Machine Learning, IoT, Computer Vision, Python, C++, R&D, Innovation" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Hamza Yeşilmen — Senior Mechatronic Engineer & R&D Specialist" />
+  <meta property="og:description" content="Expert in embedded systems, AI/ML, IoT solutions, and innovative product development." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://via.placeholder.com/1200x630/0b0c10/6ee7b7?text=Hamza+Yeşilmen" />
+  <meta property="og:url" content="https://hamza.dev" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:creator" content="@HamzaYslmn" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='128' viewBox='0 0 128 128'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%236ee7b7'/%3E%3Cstop offset='100%25' style='stop-color:%2300d4aa'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' rx='24' fill='url(%23grad)'/%3E%3Ctext x='50%25' y='60%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial Black' font-size='56' fill='%23ffffff' font-weight='900'%3EH%3C/text%3E%3C/svg%3E" />
+
   <style>
-  /* CSS from style.css relevant for contact page */
-  body { background: #121212; font-family: 'Poppins', sans-serif; }
-  main { margin: 15px 12px; margin-bottom: 75px; min-width: 259px; }
-  article { background: #1a1a1a; border: 1px solid #393939; border-radius: 20px; padding: 15px; box-shadow: -4px 8px 24px rgba(0,0,0,0.25); z-index: 1; display: block; }
-  .h2, .h3, .h4, .h5 { color: #fafafa; text-transform: capitalize; }
-  .h2 { font-size: 24px; }
-  .h3 { font-size: 18px; }
-  .article-title { position: relative; padding-bottom: 7px; margin-bottom: 30px; }
-  .article-title::after{content:"";position:absolute;bottom:0;left:0;width:30px;height:3px;background:linear-gradient(90deg,#ffe066,#ffd700);border-radius:3px}
-  .mapbox{position:relative;height:250px;width:100%;border-radius:16px;margin-bottom:30px;border:1px solid var(--jet);overflow:hidden}
-  .mapbox figure{height:100%}
-  .mapbox iframe{width:100%;height:100%;border:none;filter:grayscale(1) invert(1)}
-  .contact-form{margin-bottom:10px}
-  .form-title { margin-bottom: 20px; }
-  .input-wrapper { margin-bottom: 10px; }
-  .form-input { width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #393939; background: #222; color: #fafafa; font-size: 14px; margin-bottom: 10px; }
-  .form-input::placeholder { color: #ccc; font-weight: 500; }
-  .form-input:focus { border-color: #ffd700; outline: none; }
-  textarea.form-input { min-height: 100px; resize: vertical; }
-  .form-btn { background: linear-gradient(90deg, #ffe066, #ffd700); color: #222; border: none; border-radius: 8px; padding: 10px 20px; font-size: 15px; font-weight: 500; cursor: pointer; transition: background 0.25s; }
-  .form-btn:disabled { background: #393939; color: #aaa; cursor: not-allowed; }
+    :root{
+      --bg: #121212;
+      --bg-secondary: #1a1a1a;
+      --card: #1e1e1e;
+      --card-hover: #252525;
+      --txt: #fafafa;
+      --txt-secondary: #e0e0e0;
+      --muted: #999;
+      --muted-light: #ccc;
+      --accent: #fafafa;
+      --accent-secondary: #e0e0e0;
+      --accent-tertiary: #ccc;
+      --ring: rgba(255,255,255,0.1);
+      --border: #393939;
+      --border-light: #555;
+      --shadow: 0 8px 24px rgba(0,0,0,.3);
+      --shadow-light: 0 4px 12px rgba(0,0,0,.15);
+      --gradient: #fafafa;
+      --gradient-subtle: rgba(255,255,255,0.05);
+      --radius: 12px;
+      --radius-sm: 8px;
+      --max: 1200px;
+      --transition: all 0.2s ease;
+    }
+    
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg: #ffffff;
+        --bg-secondary: #f8f8f8;
+        --card: #ffffff;
+        --card-hover: #f5f5f5;
+        --txt: #1a1a1a;
+        --txt-secondary: #333;
+        --muted: #666;
+        --muted-light: #555;
+        --border: #e0e0e0;
+        --border-light: #d0d0d0;
+        --shadow: 0 8px 24px rgba(0,0,0,.08);
+        --shadow-light: 0 4px 12px rgba(0,0,0,.04);
+        --ring: rgba(0,0,0,0.1);
+      }
+    }
+    
+    *{box-sizing:border-box;margin:0;padding:0}
+    
+    html{
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+    
+    body{
+      background: var(--bg);
+      color: var(--txt);
+      font: 16px/1.7 'Inter', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      letter-spacing: -0.01em;
+      overflow-x: hidden;
+    }
+    
+    /* Custom scrollbar */
+    ::-webkit-scrollbar{width: 8px}
+    ::-webkit-scrollbar-track{background: var(--bg-secondary)}
+    ::-webkit-scrollbar-thumb{background: var(--muted); border-radius: 4px}
+    ::-webkit-scrollbar-thumb:hover{background: var(--txt)}
+    
+    /* Typography */
+    h1, h2, h3, h4{font-weight: 700; line-height: 1.3; letter-spacing: -0.02em}
+    h1{font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 1rem}
+    h2{font-size: clamp(1.8rem, 3vw, 2.5rem); margin-bottom: 0.8rem}
+    h3{font-size: clamp(1.3rem, 2vw, 1.8rem); margin-bottom: 0.6rem}
+    
+    a{color: inherit; text-decoration: none; transition: var(--transition)}
+    a:hover{color: var(--txt)}
+    
+    img{max-width: 100%; display: block}
+    
+    /* Layout */
+    .container{max-width: var(--max); margin: 0 auto; padding: 0 24px}
+    
+    .section{padding: 80px 0}
+    .section-sm{padding: 60px 0}
+    
+    .grid{display: grid; gap: 24px}
+    .grid-2{grid-template-columns: 1fr 1fr}
+    .grid-3{grid-template-columns: repeat(3, 1fr)}
+    .grid-auto{grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))}
+    
+    .flex{display: flex; gap: 16px}
+    .flex-col{flex-direction: column}
+    .flex-center{align-items: center; justify-content: center}
+    .flex-between{align-items: center; justify-content: space-between}
+    .flex-wrap{flex-wrap: wrap}
+    
+    /* Glass morphism effect */
+    .glass{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    
+    .glass:hover{
+      background: var(--card-hover);
+      border-color: var(--border-light);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow);
+    }
+    
+    /* Gradient elements */
+    .gradient-text{
+      color: var(--txt);
+    }
+    
+    .gradient-border{
+      position: relative;
+      background: var(--card);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+    }
+    
+    /* Animated background */
+    .hero-bg{
+      display: none;
+    }
+    
+    /* Navigation */
+    .nav{
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(18, 18, 18, 0.95);
+      border-bottom: 1px solid var(--border);
+      z-index: 1000;
+      transition: var(--transition);
+    }
+    
+    .nav.scrolled{
+      background: rgba(18, 18, 18, 0.98);
+      box-shadow: var(--shadow-light);
+    }
+    
+    .nav-content{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+    }
+    
+    .nav-logo{
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--txt);
+      text-decoration: none;
+    }
+    
+    .nav-links{
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    
+    .nav-links a{
+      padding: 8px 16px;
+      border-radius: var(--radius-sm);
+      font-weight: 500;
+      transition: var(--transition);
+      position: relative;
+    }
+    
+    .nav-links a:hover,
+    .nav-links a.active{
+      color: var(--txt);
+    }
+    
+    .nav-links a::after{
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: var(--txt);
+      border-radius: 1px;
+      transition: var(--transition);
+      transform: translateX(-50%);
+    }
+    
+    .nav-links a:hover::after,
+    .nav-links a.active::after{
+      width: 100%;
+    }
+    
+    /* Mobile menu */
+    .nav-toggle{
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      cursor: pointer;
+      padding: 8px;
+    }
+    
+    .nav-toggle span{
+      width: 24px;
+      height: 2px;
+      background: var(--txt);
+      border-radius: 1px;
+      transition: var(--transition);
+    }
+    
+    .nav-toggle.active span:nth-child(1){transform: rotate(45deg) translate(5px, 5px)}
+    .nav-toggle.active span:nth-child(2){opacity: 0}
+    .nav-toggle.active span:nth-child(3){transform: rotate(-45deg) translate(7px, -6px)}
+    
+    @media (max-width: 768px){
+      .nav-links{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-top: none;
+        flex-direction: column;
+        padding: 24px;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition);
+      }
+      
+      .nav-links.active{
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+      
+      .nav-toggle{display: flex}
+    }
+    
+    /* Hero Section */
+    .hero{
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background: var(--bg-secondary);
+    }
+    
+    .hero-content{
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+    }
+    
+    .hero-badge{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 20px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      color: var(--txt);
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 24px;
+      animation: fadeInUp 0.8s ease-out 0.2s both;
+    }
+    
+    .hero h1{
+      margin-bottom: 24px;
+      animation: fadeInUp 0.8s ease-out 0.4s both;
+    }
+    
+    .hero p{
+      font-size: 1.2rem;
+      color: var(--muted-light);
+      max-width: 600px;
+      margin-bottom: 40px;
+      animation: fadeInUp 0.8s ease-out 0.6s both;
+    }
+    
+    .hero-cta{
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      animation: fadeInUp 0.8s ease-out 0.8s both;
+    }
+    
+    /* Buttons */
+    .btn{
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 32px;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+      cursor: pointer;
+      border: none;
+      font-size: 1rem;
+    }
+    
+    .btn-primary{
+      background: var(--txt);
+      color: var(--bg);
+      box-shadow: 0 4px 16px rgba(255,255,255,0.1);
+    }
+    
+    .btn-primary:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(255,255,255,0.15);
+    }
+    
+    .btn-secondary{
+      background: transparent;
+      color: var(--txt);
+      border: 2px solid var(--border);
+    }
+    
+    .btn-secondary:hover{
+      border-color: var(--txt);
+      color: var(--txt);
+      transform: translateY(-1px);
+    }
+    
+    /* Cards */
+    .card{
+      padding: 32px;
+      border-radius: var(--radius);
+      transition: var(--transition);
+    }
+    
+    .card-feature{
+      text-align: center;
+      padding: 40px 24px;
+    }
+    
+    .card-feature .icon{
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 24px;
+      background: var(--muted);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: var(--bg);
+    }
+    
+    .card-project{
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .card-project::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--txt);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: var(--transition);
+    }
+    
+    .card-project:hover::before{
+      transform: scaleX(1);
+    }
+    
+    /* Skills */
+    .skill-grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+    
+    .skill-category h4{
+      color: var(--txt);
+      margin-bottom: 16px;
+      font-size: 1.1rem;
+    }
+    
+    .skill-list{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    
+    .skill-tag{
+      padding: 8px 16px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+    
+    .skill-tag:hover{
+      background: var(--card-hover);
+      border-color: var(--txt);
+      color: var(--txt);
+    }
+    
+    /* Experience Timeline */
+    .timeline{
+      position: relative;
+      padding-left: 40px;
+    }
+    
+    .timeline::before{
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--muted);
+    }
+    
+    .timeline-item{
+      position: relative;
+      margin-bottom: 40px;
+      padding: 24px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: var(--transition);
+    }
+    
+    .timeline-item::before{
+      content: '';
+      position: absolute;
+      left: -32px;
+      top: 30px;
+      width: 12px;
+      height: 12px;
+      background: var(--txt);
+      border-radius: 50%;
+      border: 3px solid var(--bg);
+    }
+    
+    .timeline-item:hover{
+      transform: translateX(8px);
+      border-color: var(--txt);
+    }
+    
+    .timeline-date{
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+    }
+    
+    .timeline-title{
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+    }
+    
+    .timeline-company{
+      color: var(--muted);
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+    
+    /* Animations */
+    @keyframes fadeInUp{
+      from{
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to{
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .fade-in{
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-out;
+    }
+    
+    .fade-in.visible{
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* Contact Form */
+    .contact-form{
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .form-group{
+      margin-bottom: 24px;
+    }
+    
+    .form-group label{
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: var(--txt-secondary);
+    }
+    
+    .form-group input,
+    .form-group textarea{
+      width: 100%;
+      padding: 16px;
+      background: var(--card);
+      border: 2px solid var(--border);
+      border-radius: var(--radius-sm);
+      color: var(--txt);
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+    
+    .form-group input:focus,
+    .form-group textarea:focus{
+      outline: none;
+      border-color: var(--txt);
+    }
+    
+    .form-group textarea{
+      resize: vertical;
+      min-height: 120px;
+    }
+    
+    /* Footer */
+    .footer{
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border);
+      padding: 60px 0 40px;
+      text-align: center;
+    }
+    
+    .footer-content{
+      margin-bottom: 32px;
+    }
+    
+    .footer-links{
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    
+    .footer-links a{
+      color: var(--muted);
+      transition: var(--transition);
+    }
+    
+    .footer-links a:hover{
+      color: var(--txt);
+    }
+    
+    .social-links{
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    
+    .social-link{
+      width: 48px;
+      height: 48px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+      font-size: 1.2rem;
+    }
+    
+    .social-link:hover{
+      background: var(--muted);
+      border-color: var(--muted);
+      color: var(--bg);
+      transform: translateY(-1px);
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 1024px){
+      .container{padding: 0 20px}
+      .section{padding: 60px 0}
+      .grid-2, .grid-3{grid-template-columns: 1fr}
+    }
+    
+    @media (max-width: 768px){
+      .hero{min-height: 80vh; text-align: center}
+      .hero h1{font-size: 2.5rem}
+      .hero p{font-size: 1.1rem}
+      .hero-cta{justify-content: center}
+      .btn{padding: 14px 24px}
+      .timeline{padding-left: 20px}
+      .timeline::before{left: 10px}
+      .timeline-item::before{left: -16px}
+    }
+    
+    @media (max-width: 480px){
+      .container{padding: 0 16px}
+      .hero h1{font-size: 2rem}
+      .hero-cta{flex-direction: column; align-items: center}
+      .btn{width: 100%; justify-content: center}
+    }
+    
+    /* Theme Toggle */
+    .theme-toggle{
+      position: relative;
+      width: 64px;
+      height: 32px;
+      background: var(--border);
+      border-radius: 20px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    
+    .theme-toggle::before{
+      content: '';
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      width: 24px;
+      height: 24px;
+      background: var(--txt);
+      border-radius: 50%;
+      transition: var(--transition);
+    }
+    
+    .theme-toggle.active{
+      background: var(--txt);
+    }
+    
+    .theme-toggle.active::before{
+      left: 36px;
+    }
   </style>
 </head>
 <body>
-  <main>
-    <article class="contact active" data-page="contact">
-      <header>
-        <h2 class="h2 article-title">Contact</h2>
-      </header>
-      <section class="mapbox" data-mapbox>
-        <figure>
-          <iframe src="https://maps.google.com/maps?q=Ankara%2C%20Turkey&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
-        </figure>
-      </section>
-      <section class="contact-form">
-        <h3 class="h3 form-title">Contact Form</h3>
-        <form action="#" class="form" data-form>
-          <div class="input-wrapper">
-            <input type="text" name="fullname" class="form-input" placeholder="Your Name" required data-form-input>
+  <!-- Navigation -->
+  <nav class="nav" id="navbar">
+    <div class="container">
+      <div class="nav-content">
+        <a href="#top" class="nav-logo">Hamza Yeşilmen</a>
+        
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        
+        <div class="nav-toggle" id="navToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="top" class="hero">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span>🚀</span>
+          Senior Mechatronic Engineer & R&D Specialist
+        </div>
+        
+        <h1>
+          Building the future with 
+          <span class="gradient-text">AI & Innovation</span>
+        </h1>
+        
+        <p>
+          Passionate mechatronic engineer specializing in embedded systems, artificial intelligence, 
+          IoT solutions, and cutting-edge product development. Transforming complex ideas into 
+          scalable, real-world solutions.
+        </p>
+        
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary">
+            Let's Collaborate
+            <span>→</span>
+          </a>
+          <a href="#projects" class="btn btn-secondary">
+            View My Work
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="grid grid-2" style="align-items: center; gap: 80px;">
+        <div class="fade-in">
+          <h2>About Me</h2>
+          <p style="color: var(--muted); margin-bottom: 24px;">
+            I'm a Senior Mechatronic Engineer with expertise in bridging the gap between hardware and software. 
+            My passion lies in developing innovative solutions that combine embedded systems, artificial intelligence, 
+            and modern web technologies.
+          </p>
+          
+          <p style="color: var(--muted); margin-bottom: 32px;">
+            With a strong background in R&D, I've contributed to numerous projects ranging from IoT devices 
+            and computer vision systems to full-stack web applications and cloud architectures. I believe in 
+            continuous learning and staying at the forefront of technological advancement.
+          </p>
+          
+          <div class="grid grid-3" style="gap: 24px;">
+            <div class="card-feature glass">
+              <div class="icon">🔧</div>
+              <h4>Hardware Expertise</h4>
+              <p style="color: var(--muted); font-size: 0.9rem;">
+                Embedded C/C++, Arduino, Raspberry Pi, sensor integration
+              </p>
+            </div>
+            <div class="card-feature glass">
+              <div class="icon">🤖</div>
+              <h4>AI & ML</h4>
+              <p style="color: var(--muted); font-size: 0.9rem;">
+                Computer Vision, TensorFlow, PyTorch, OpenCV
+              </p>
+            </div>
+            <div class="card-feature glass">
+              <div class="icon">☁️</div>
+              <h4>Cloud & Web</h4>
+              <p style="color: var(--muted); font-size: 0.9rem;">
+                FastAPI, Docker, Google Cloud, full-stack development
+              </p>
+            </div>
           </div>
-          <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-          <button class="form-btn" type="submit" disabled data-form-btn><span id="sendText">Send Message</span> <span id="mailIcon" style="display:none;">📧</span></button>
-        </form>
-      </section>
-    </article>
-  </main>
+        </div>
+        
+        <div class="fade-in">
+          <div class="glass" style="padding: 40px; text-align: center;">
+            <div style="width: 120px; height: 120px; background: var(--muted); border-radius: 50%; margin: 0 auto 24px; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: var(--bg);">
+              H
+            </div>
+            <h3>Hamza Yeşilmen</h3>
+            <p style="color: var(--muted); margin-bottom: 24px;">Mechatronic Engineer & R&D Specialist</p>
+            
+            <div style="display: flex; justify-content: center; gap: 16px; margin-bottom: 24px;">
+              <div class="social-link">
+                <a href="https://github.com/HamzaYslmn" target="_blank" rel="noreferrer">📱</a>
+              </div>
+              <div class="social-link">
+                <a href="https://www.linkedin.com/in/hamzayslmn" target="_blank" rel="noreferrer">💼</a>
+              </div>
+              <div class="social-link">
+                <a href="mailto:hello@hamza.dev">📧</a>
+              </div>
+            </div>
+            
+            <div style="text-align: left; color: var(--muted); font-size: 0.9rem;">
+              <p><strong>📍 Location:</strong> Turkey</p>
+              <p><strong>💼 Available for:</strong> Freelance & Full-time</p>
+              <p><strong>🌐 Languages:</strong> Turkish, English</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="fade-in" style="text-align: center; margin-bottom: 80px;">
+        <h2>Professional Experience</h2>
+        <p style="color: var(--muted); max-width: 600px; margin: 0 auto;">
+          A journey of innovation, learning, and delivering impactful solutions across various domains.
+        </p>
+      </div>
+      
+      <div class="timeline fade-in">
+        <div class="timeline-item">
+          <div class="timeline-date">2023 - Present</div>
+          <h3 class="timeline-title">Senior Mechatronic Engineer</h3>
+          <div class="timeline-company">R&D Department</div>
+          <p style="color: var(--muted); margin-bottom: 16px;">
+            Leading the development of embedded systems and IoT solutions. Specializing in sensor integration, 
+            real-time data processing, and AI-powered edge computing applications.
+          </p>
+          <div class="skill-list">
+            <span class="skill-tag">Embedded C/C++</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">IoT</span>
+            <span class="skill-tag">Computer Vision</span>
+            <span class="skill-tag">Real-time Systems</span>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-date">2021 - 2023</div>
+          <h3 class="timeline-title">Mechatronic Engineer</h3>
+          <div class="timeline-company">Product Development Team</div>
+          <p style="color: var(--muted); margin-bottom: 16px;">
+            Developed innovative mechatronic systems combining mechanical, electrical, and software components. 
+            Focused on automation, robotics, and intelligent control systems.
+          </p>
+          <div class="skill-list">
+            <span class="skill-tag">Arduino</span>
+            <span class="skill-tag">Raspberry Pi</span>
+            <span class="skill-tag">Sensor Fusion</span>
+            <span class="skill-tag">Control Systems</span>
+            <span class="skill-tag">PCB Design</span>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-date">2020 - 2021</div>
+          <h3 class="timeline-title">Junior Engineer</h3>
+          <div class="timeline-company">Technology Research Lab</div>
+          <p style="color: var(--muted); margin-bottom: 16px;">
+            Started my professional journey in R&D, working on prototype development and proof-of-concept projects. 
+            Gained valuable experience in project management and cross-functional collaboration.
+          </p>
+          <div class="skill-list">
+            <span class="skill-tag">Prototyping</span>
+            <span class="skill-tag">3D Design</span>
+            <span class="skill-tag">Testing</span>
+            <span class="skill-tag">Documentation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="fade-in" style="text-align: center; margin-bottom: 80px;">
+        <h2>Featured Projects</h2>
+        <p style="color: var(--muted); max-width: 600px; margin: 0 auto;">
+          A selection of projects that showcase my expertise in mechatronics, AI, and software development.
+        </p>
+      </div>
+      
+      <div class="grid grid-auto fade-in">
+        <!-- Project 1: HireUp360 Platform -->
+        <div class="card glass card-project">
+          <div style="margin-bottom: 24px;">
+            <span style="background: var(--card-hover); color: var(--txt); padding: 6px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; border: 1px solid var(--border);">🚀 Active Development</span>
+          </div>
+          <h3>HireUp360 Platform</h3>
+          <p style="color: var(--muted); margin-bottom: 20px;">
+            Full-stack AI-powered recruitment platform with microservices architecture. Features real-time matching, 
+            automated screening, and advanced analytics dashboard.
+          </p>
+          <div class="skill-list" style="margin-bottom: 20px;">
+            <span class="skill-tag">FastAPI</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">AI/ML</span>
+          </div>
+          <div class="flex" style="gap: 12px;">
+            <a href="https://github.com/Mountain-YZ/HireUp360-Live" target="_blank" rel="noreferrer" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.9rem;">
+              View Code ↗
+            </a>
+          </div>
+        </div>
+        
+        <!-- Project 2: g-helper-TR -->
+        <div class="card glass card-project">
+          <div style="margin-bottom: 24px;">
+            <span style="background: var(--card-hover); color: var(--txt); padding: 6px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; border: 1px solid var(--border);">⭐ Open Source</span>
+          </div>
+          <h3>G-Helper Turkish Localization</h3>
+          <p style="color: var(--muted); margin-bottom: 20px;">
+            Turkish localization and community support for G-Helper, an open-source control utility for 
+            ASUS Zephyrus/Strix/TUF laptops with GPU & performance mode controls.
+          </p>
+          <div class="skill-list" style="margin-bottom: 20px;">
+            <span class="skill-tag">C#</span>
+            <span class="skill-tag">Windows API</span>
+            <span class="skill-tag">Localization</span>
+            <span class="skill-tag">Community</span>
+          </div>
+          <div class="flex" style="gap: 12px;">
+            <a href="https://github.com/HamzaYslmn/g-helper-TR" target="_blank" rel="noreferrer" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.9rem;">
+              View Code ↗
+            </a>
+          </div>
+        </div>
+        
+        <!-- Project 3: Smart IoT Monitoring -->
+        <div class="card glass card-project">
+          <div style="margin-bottom: 24px;">
+            <span style="background: var(--card-hover); color: var(--txt); padding: 6px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; border: 1px solid var(--border);">🔧 Embedded</span>
+          </div>
+          <h3>Smart IoT Monitoring System</h3>
+          <p style="color: var(--muted); margin-bottom: 20px;">
+            Real-time environmental monitoring system with edge AI capabilities. Features wireless sensor networks, 
+            predictive analytics, and cloud-based dashboard.
+          </p>
+          <div class="skill-list" style="margin-bottom: 20px;">
+            <span class="skill-tag">Embedded C</span>
+            <span class="skill-tag">ESP32</span>
+            <span class="skill-tag">LoRaWAN</span>
+            <span class="skill-tag">TensorFlow Lite</span>
+            <span class="skill-tag">Firebase</span>
+          </div>
+          <div class="flex" style="gap: 12px;">
+            <a href="#contact" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.9rem;">
+              Contact for Details
+            </a>
+          </div>
+        </div>
+        
+        <!-- Project 4: Computer Vision Pipeline -->
+        <div class="card glass card-project">
+          <div style="margin-bottom: 24px;">
+            <span style="background: var(--card-hover); color: var(--txt); padding: 6px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; border: 1px solid var(--border);">🤖 AI/ML</span>
+          </div>
+          <h3>Industrial Vision Inspection</h3>
+          <p style="color: var(--muted); margin-bottom: 20px;">
+            AI-powered quality control system for manufacturing. Real-time defect detection with 99.7% accuracy 
+            using custom CNN models and optimized inference pipeline.
+          </p>
+          <div class="skill-list" style="margin-bottom: 20px;">
+            <span class="skill-tag">OpenCV</span>
+            <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">YOLO</span>
+            <span class="skill-tag">Edge Computing</span>
+            <span class="skill-tag">ROS</span>
+          </div>
+          <div class="flex" style="gap: 12px;">
+            <a href="#contact" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.9rem;">
+              Learn More
+            </a>
+          </div>
+        </div>
+        
+        <!-- Project 5: GitHub Profile Enhancement -->
+        <div class="card glass card-project">
+          <div style="margin-bottom: 24px;">
+            <span style="background: var(--card-hover); color: var(--txt); padding: 6px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; border: 1px solid var(--border);">🎨 Tools</span>
+          </div>
+          <h3>GitHub Profile Enhancements</h3>
+          <p style="color: var(--muted); margin-bottom: 20px;">
+            Collection of dynamic GitHub profile components including real-time Spotify integration, 
+            customized statistics displays, and automated README generation tools.
+          </p>
+          <div class="skill-list" style="margin-bottom: 20px;">
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">Jinja</span>
+            <span class="skill-tag">GitHub Actions</span>
+            <span class="skill-tag">APIs</span>
+          </div>
+          <div class="flex" style="gap: 12px;">
+            <a href="https://github.com/HamzaYslmn/novatorem" target="_blank" rel="noreferrer" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.9rem;">
+              View Projects ↗
+            </a>
+          </div>
+        </div>
+        
+        <!-- Project 6: Automation Scripts -->
+        <div class="card glass card-project">
+          <div style="margin-bottom: 24px;">
+            <span style="background: var(--card-hover); color: var(--txt); padding: 6px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; border: 1px solid var(--border);">⚡ Automation</span>
+          </div>
+          <h3>Development Automation Suite</h3>
+          <p style="color: var(--muted); margin-bottom: 20px;">
+            Comprehensive automation tools for development workflows, including stress testing frameworks, 
+            API testing suites, and deployment automation scripts.
+          </p>
+          <div class="skill-list" style="margin-bottom: 20px;">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Bash</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">CI/CD</span>
+            <span class="skill-tag">Testing</span>
+          </div>
+          <div class="flex" style="gap: 12px;">
+            <a href="https://github.com/HamzaYslmn?tab=repositories" target="_blank" rel="noreferrer" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.9rem;">
+              Browse All ↗
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div style="text-align: center; margin-top: 60px;" class="fade-in">
+        <p style="color: var(--muted); margin-bottom: 24px;">
+          Interested in seeing more of my work or discussing potential collaborations?
+        </p>
+        <a href="https://github.com/HamzaYslmn?tab=repositories" target="_blank" rel="noreferrer" class="btn btn-primary">
+          View All Projects on GitHub
+          <span>↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="fade-in" style="text-align: center; margin-bottom: 80px;">
+        <h2>Technical Expertise</h2>
+        <p style="color: var(--muted); max-width: 600px; margin: 0 auto;">
+          A comprehensive skill set spanning hardware, software, AI, and cloud technologies.
+        </p>
+      </div>
+      
+      <div class="skill-grid fade-in">
+        <div class="skill-category">
+          <h4>🔧 Embedded & Hardware</h4>
+          <div class="skill-list">
+            <span class="skill-tag">Embedded C/C++</span>
+            <span class="skill-tag">Arduino</span>
+            <span class="skill-tag">Raspberry Pi</span>
+            <span class="skill-tag">ESP32/ESP8266</span>
+            <span class="skill-tag">STM32</span>
+            <span class="skill-tag">RTOS</span>
+            <span class="skill-tag">I2C/SPI/UART</span>
+            <span class="skill-tag">PCB Design</span>
+            <span class="skill-tag">Sensor Integration</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h4>🐍 Programming Languages</h4>
+          <div class="skill-list">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">C/C++</span>
+            <span class="skill-tag">JavaScript/TypeScript</span>
+            <span class="skill-tag">C#</span>
+            <span class="skill-tag">Go</span>
+            <span class="skill-tag">Rust (Learning)</span>
+            <span class="skill-tag">Bash/Shell</span>
+            <span class="skill-tag">SQL</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h4>🤖 AI & Machine Learning</h4>
+          <div class="skill-list">
+            <span class="skill-tag">TensorFlow</span>
+            <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">OpenCV</span>
+            <span class="skill-tag">scikit-learn</span>
+            <span class="skill-tag">NumPy/Pandas</span>
+            <span class="skill-tag">YOLO</span>
+            <span class="skill-tag">Computer Vision</span>
+            <span class="skill-tag">Edge AI</span>
+            <span class="skill-tag">MLOps</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h4>🌐 Web & Backend</h4>
+          <div class="skill-list">
+            <span class="skill-tag">FastAPI</span>
+            <span class="skill-tag">Django</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Next.js</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">RESTful APIs</span>
+            <span class="skill-tag">GraphQL</span>
+            <span class="skill-tag">WebSocket</span>
+            <span class="skill-tag">Socket.IO</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h4>☁️ Cloud & DevOps</h4>
+          <div class="skill-list">
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Kubernetes</span>
+            <span class="skill-tag">Google Cloud Platform</span>
+            <span class="skill-tag">Firebase</span>
+            <span class="skill-tag">AWS (Basic)</span>
+            <span class="skill-tag">CI/CD</span>
+            <span class="skill-tag">GitHub Actions</span>
+            <span class="skill-tag">Nginx</span>
+            <span class="skill-tag">Linux Administration</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h4>🗄️ Databases & Tools</h4>
+          <div class="skill-list">
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">Redis</span>
+            <span class="skill-tag">Firestore</span>
+            <span class="skill-tag">Git/GitHub</span>
+            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">Jupyter</span>
+            <span class="skill-tag">Postman</span>
+            <span class="skill-tag">IFTTT</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h4>🎯 Specialized Areas</h4>
+          <div class="skill-list">
+            <span class="skill-tag">IoT Solutions</span>
+            <span class="skill-tag">Real-time Systems</span>
+            <span class="skill-tag">Sensor Fusion</span>
+            <span class="skill-tag">Control Systems</span>
+            <span class="skill-tag">Robotics</span>
+            <span class="skill-tag">3D Modeling</span>
+            <span class="skill-tag">Product Development</span>
+            <span class="skill-tag">R&D Methodologies</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h4>🛠️ Development Tools</h4>
+          <div class="skill-list">
+            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">CLion</span>
+            <span class="skill-tag">PyCharm</span>
+            <span class="skill-tag">Arduino IDE</span>
+            <span class="skill-tag">PlatformIO</span>
+            <span class="skill-tag">Figma</span>
+            <span class="skill-tag">SolidWorks</span>
+            <span class="skill-tag">KiCad</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container" style="display: flex; justify-content: center; align-items: center; min-height: 70vh; padding: 0;">
+      <div class="fade-in" style="width: 100%; max-width: 600px; margin: 0 auto;">
+        <article class="glass" style="padding: 40px 32px 32px 32px; width: 100%; margin: 0 auto; min-height: 0; box-sizing: border-box;">
+          <header>
+            <h2 style="font-size: 24px; color: var(--txt); text-transform: capitalize; position: relative; padding-bottom: 7px; margin-bottom: 30px;">
+              Contact
+            </h2>
+            <style>
+              .contact h2::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 30px;
+                height: 3px;
+                background: var(--txt);
+                border-radius: 3px;
+              }
+              .mapbox {
+                position: relative;
+                height: 250px;
+                width: 100%;
+                border-radius: 16px;
+                margin-bottom: 30px;
+                border: 1px solid var(--border);
+                overflow: hidden;
+              }
+              .mapbox figure {
+                height: 100%;
+              }
+              .mapbox iframe {
+                width: 100%;
+                height: 100%;
+                border: none;
+                filter: grayscale(1) invert(0.9);
+              }
+              .contact-form {
+                margin-bottom: 10px;
+              }
+              .form-title {
+                margin-bottom: 20px;
+                font-size: 18px;
+                color: var(--txt);
+              }
+              .input-wrapper {
+                margin-bottom: 10px;
+              }
+              .form-input {
+                width: 100%;
+                padding: 15px;
+                border-radius: 8px;
+                border: 1px solid var(--border);
+                background: var(--card);
+                color: var(--txt);
+                font-size: 14px;
+                margin-bottom: 10px;
+                font-family: 'Inter', sans-serif;
+                transition: var(--transition);
+              }
+              .form-input::placeholder {
+                color: var(--muted);
+                font-weight: 500;
+              }
+              .form-input:focus {
+                border-color: var(--txt);
+                outline: none;
+              }
+              textarea.form-input {
+                min-height: 100px;
+                resize: vertical;
+              }
+              .form-btn {
+                background: var(--txt);
+                color: var(--bg);
+                border: none;
+                border-radius: 8px;
+                padding: 15px 20px;
+                font-size: 15px;
+                font-weight: 500;
+                cursor: pointer;
+                transition: var(--transition);
+                width: auto;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+              }
+              .form-btn:disabled {
+                background: var(--muted);
+                color: var(--bg-secondary);
+                cursor: not-allowed;
+              }
+              .form-btn:not(:disabled):hover {
+                transform: translateY(-1px);
+                box-shadow: 0 4px 12px rgba(255,255,255,0.1);
+              }
+            </style>
+          </header>
+          
+          <section class="mapbox" data-mapbox>
+            <figure>
+              <iframe src="https://maps.google.com/maps?q=Ankara%2C%20Turkey&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+            </figure>
+          </section>
+          
+          <section class="contact-form">
+            <h3 class="form-title">Contact Form</h3>
+            <form action="#" class="form" data-form>
+              <div class="input-wrapper">
+                <input type="text" name="fullname" class="form-input" placeholder="Your Name" required data-form-input>
+              </div>
+              <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+              <button class="form-btn" type="submit" disabled data-form-btn>
+                <span id="sendText">Send Message</span> 
+                <span id="mailIcon" style="display:none;">📧</span>
+              </button>
+            </form>
+          </section>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </div>
+        
+        <div class="social-links">
+          <a href="https://github.com/HamzaYslmn" target="_blank" rel="noreferrer" class="social-link" title="GitHub">
+            📱
+          </a>
+          <a href="https://www.linkedin.com/in/hamzayslmn" target="_blank" rel="noreferrer" class="social-link" title="LinkedIn">
+            💼
+          </a>
+          <a href="mailto:hello@hamza.dev" class="social-link" title="Email">
+            📧
+          </a>
+        </div>
+        
+        <div style="max-width: 500px; margin: 0 auto;">
+          <p style="color: var(--muted); margin-bottom: 16px;">
+            Passionate about creating innovative solutions that bridge the gap between hardware and software. 
+            Always excited to collaborate on challenging projects.
+          </p>
+          <p style="color: var(--muted); font-size: 0.9rem;">
+            © <span id="currentYear"></span> Hamza Yeşilmen. Built with modern web technologies and lots of ☕
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
   <script>
-// Minimal JS for contact form
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.querySelector('[data-form]');
-  const formInputs = document.querySelectorAll('[data-form-input]');
-  const formBtn = document.querySelector('[data-form-btn]');
-  const messageInput = document.querySelector('textarea[name="message"]');
-  const fullNameInput = document.querySelector('input[name="fullname"]');
-  const sendBtn = document.querySelector('.form-btn');
-  const sendText = document.getElementById('sendText');
-  const mailIcon = document.getElementById('mailIcon');
+    // Navigation functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const navbar = document.getElementById('navbar');
+      const navToggle = document.getElementById('navToggle');
+      const navLinks = document.getElementById('navLinks');
+      
+      // Mobile menu toggle
+      navToggle.addEventListener('click', function() {
+        navToggle.classList.toggle('active');
+        navLinks.classList.toggle('active');
+      });
+      
+      // Close mobile menu when clicking on links
+      navLinks.addEventListener('click', function(e) {
+        if (e.target.tagName === 'A') {
+          navToggle.classList.remove('active');
+          navLinks.classList.remove('active');
+        }
+      });
+      
+      // Navbar scroll effect
+      let lastScrollY = window.scrollY;
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+        lastScrollY = window.scrollY;
+      });
+      
+      // Active navigation link highlighting
+      const sections = document.querySelectorAll('section[id]');
+      const navLinksList = document.querySelectorAll('.nav-links a');
+      
+      function highlightNavigation() {
+        let current = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 100;
+          const sectionHeight = section.clientHeight;
+          if (window.scrollY >= sectionTop && window.scrollY <= sectionTop + sectionHeight) {
+            current = section.getAttribute('id');
+          }
+        });
+        
+        navLinksList.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+          }
+        });
+      }
+      
+      window.addEventListener('scroll', highlightNavigation);
+      
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            const headerOffset = 80;
+            const elementPosition = target.offsetTop;
+            const offsetPosition = elementPosition - headerOffset;
+            
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+      
+      // Intersection Observer for fade-in animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+      
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, observerOptions);
+      
+      document.querySelectorAll('.fade-in').forEach(el => {
+        observer.observe(el);
+      });
+      
+      // Contact form handling
+      const form = document.querySelector('[data-form]');
+      const formInputs = document.querySelectorAll('[data-form-input]');
+      const formBtn = document.querySelector('[data-form-btn]');
+      const messageInput = document.querySelector('textarea[name="message"]');
+      const fullNameInput = document.querySelector('input[name="fullname"]');
+      const sendBtn = document.querySelector('.form-btn');
+      const sendText = document.getElementById('sendText');
+      const mailIcon = document.getElementById('mailIcon');
 
-  // Enable send button if all fields are filled
-  function checkInputs() {
-    if (messageInput.value.trim() !== '' && fullNameInput.value.trim() !== '') {
-      formBtn.removeAttribute('disabled');
-    } else {
-      formBtn.setAttribute('disabled', 'disabled');
+      // Enable send button if all fields are filled
+      function checkInputs() {
+        if (messageInput && fullNameInput && messageInput.value.trim() !== '' && fullNameInput.value.trim() !== '') {
+          formBtn.removeAttribute('disabled');
+        } else {
+          formBtn.setAttribute('disabled', 'disabled');
+        }
+      }
+      
+      if (messageInput) messageInput.addEventListener('input', checkInputs);
+      if (fullNameInput) fullNameInput.addEventListener('input', checkInputs);
+
+      if (sendBtn) {
+        sendBtn.addEventListener('mouseover', () => {
+          if (sendText) sendText.textContent = 'Gmail Redirect';
+          if (mailIcon) mailIcon.style.display = 'inline';
+        });
+        sendBtn.addEventListener('mouseout', () => {
+          if (sendText) sendText.textContent = 'Send Message';
+          if (mailIcon) mailIcon.style.display = 'none';
+        });
+      }
+
+      if (form) {
+        form.addEventListener('submit', function (event) {
+          event.preventDefault();
+          const message = messageInput ? messageInput.value.trim() : '';
+          const fullName = fullNameInput ? fullNameInput.value.trim() : '';
+          if (message === '' || fullName === '') {
+            alert('Please fill in all the fields.');
+            return;
+          }
+          const emailBody = encodeURIComponent(message);
+          const emailBodyTitle = encodeURIComponent(fullName);
+          const emailLink = `https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&su=Message+From+Website&to=resmiyslmn@gmail.com&body=${emailBodyTitle}%0A-%0A%0A${emailBody}`;
+          window.open(emailLink, '_blank');
+          if (messageInput) messageInput.value = '';
+          if (fullNameInput) fullNameInput.value = '';
+          checkInputs();
+        });
+      }
+      
+      // Legacy contact form handling for backward compatibility
+      window.handleSubmit = function(event) {
+        event.preventDefault();
+        
+        const formData = new FormData(event.target);
+        const name = formData.get('name');
+        const email = formData.get('email');
+        const subject = formData.get('subject');
+        const message = formData.get('message');
+        
+        // Create mailto link
+        const mailtoLink = `mailto:resmiyslmn@gmail.com?subject=${encodeURIComponent(subject || 'Contact from Website')}&body=${encodeURIComponent(
+          `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+        )}`;
+        
+        window.location.href = mailtoLink;
+        
+        // Show feedback
+        const button = event.target.querySelector('button[type="submit"]');
+        const originalText = button.innerHTML;
+        button.innerHTML = '✓ Opening email client...';
+        button.disabled = true;
+        
+        setTimeout(() => {
+          button.innerHTML = originalText;
+          button.disabled = false;
+          event.target.reset();
+        }, 3000);
+      };
+      
+      // Set current year
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+      
+      // Typing animation for hero text (optional enhancement)
+      const heroTitle = document.querySelector('.hero h1');
+      if (heroTitle) {
+        heroTitle.style.opacity = '0';
+        setTimeout(() => {
+          heroTitle.style.opacity = '1';
+          heroTitle.style.animation = 'fadeInUp 0.8s ease-out forwards';
+        }, 500);
+      }
+      
+      // Add some interactive particles (optional)
+      function createParticle() {
+        const particle = document.createElement('div');
+        particle.style.position = 'fixed';
+        particle.style.width = '4px';
+        particle.style.height = '4px';
+        particle.style.background = 'var(--accent)';
+        particle.style.borderRadius = '50%';
+        particle.style.pointerEvents = 'none';
+        particle.style.opacity = '0.6';
+        particle.style.zIndex = '1';
+        
+        const x = Math.random() * window.innerWidth;
+        const y = Math.random() * window.innerHeight;
+        
+        particle.style.left = x + 'px';
+        particle.style.top = y + 'px';
+        
+        document.body.appendChild(particle);
+        
+        // Animate particle
+        particle.animate([
+          { transform: 'translateY(0px)', opacity: 0.6 },
+          { transform: 'translateY(-100px)', opacity: 0 }
+        ], {
+          duration: 3000,
+          easing: 'ease-out'
+        }).onfinish = () => {
+          particle.remove();
+        };
+      }
+      
+      // Create particles occasionally
+      setInterval(createParticle, 2000);
+      
+      // Performance optimization: Reduce animations on low-end devices
+      if (navigator.hardwareConcurrency && navigator.hardwareConcurrency < 4) {
+        document.documentElement.style.setProperty('--transition', 'all 0.2s ease');
+      }
+    });
+    
+    // Theme detection and handling
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (!prefersDark) {
+      document.documentElement.classList.add('light-theme');
     }
-  }
-  messageInput.addEventListener('input', checkInputs);
-  fullNameInput.addEventListener('input', checkInputs);
-
-  sendBtn.addEventListener('mouseover', () => {
-    sendText.textContent = 'Gmail Redirect';
-    mailIcon.style.display = 'inline';
-  });
-  sendBtn.addEventListener('mouseout', () => {
-    sendText.textContent = 'Send Message';
-    mailIcon.style.display = 'none';
-  });
-
-  form.addEventListener('submit', function (event) {
-    event.preventDefault();
-    const message = messageInput.value.trim();
-    const fullName = fullNameInput.value.trim();
-    if (message === '' || fullName === '') {
-      alert('Please fill in all the fields.');
-      return;
+    
+    // Error handling for external resources
+    window.addEventListener('error', function(e) {
+      console.warn('Resource failed to load:', e.target.src || e.target.href);
+    });
+    
+    // Progressive enhancement
+    if ('serviceWorker' in navigator) {
+      // Could add service worker for offline functionality
     }
-    const emailBody = encodeURIComponent(message);
-    const emailBodyTitle = encodeURIComponent(fullName);
-    const emailLink = `https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&su=Message+From+Website&to=resmiyslmn@gmail.com&body=${emailBodyTitle}%0A-%0A%0A${emailBody}`;
-    window.open(emailLink, '_blank');
-    messageInput.value = '';
-    fullNameInput.value = '';
-    checkInputs();
-  });
-});
   </script>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
