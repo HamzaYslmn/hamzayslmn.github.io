@@ -42,42 +42,34 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="section">
-      <div className="container" style={{ 
-        display: 'flex', 
-        justifyContent: 'center', 
-        alignItems: 'center', 
-        minHeight: '70vh', 
-        padding: '0' 
-      }}>
-        <div className="fade-in" style={{ 
-          width: '100%', 
-          maxWidth: '600px', 
-          margin: '0 auto' 
-        }}>
-          <article className="glass contact-card">
+    <section id="contact" className="py-20">
+      <div className="flex justify-center items-center min-h-[70vh] px-6">
+        <div className="w-full max-w-2xl mx-auto opacity-0 translate-y-8 transition-all duration-700 ease-out">
+          <article className="bg-card border border-border rounded-default shadow-custom p-10 w-full">
             <header>
-              <h2 className="contact-title">Contact</h2>
+              <h2 className="text-2xl font-bold text-txt capitalize relative pb-2 mb-8 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-8 after:h-1 after:bg-txt after:rounded">
+                Contact
+              </h2>
             </header>
             
-            <section className="mapbox">
-              <figure style={{ height: '100%' }}>
+            <section className="relative h-64 w-full rounded-2xl mb-8 border border-border overflow-hidden">
+              <figure className="h-full">
                 <iframe 
                   src="https://maps.google.com/maps?q=Ankara%2C%20Turkey&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                  className="map-iframe"
+                  className="w-full h-full border-0 grayscale invert-[0.9]"
                   title="Location Map"
                 />
               </figure>
             </section>
             
-            <section className="contact-form">
-              <h3 className="form-title">Contact Form</h3>
-              <form onSubmit={handleSubmit} className="form">
-                <div className="input-wrapper">
+            <section className="max-w-2xl mx-auto">
+              <h3 className="mb-5 text-lg text-txt font-semibold">Contact Form</h3>
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div className="mb-3">
                   <input 
                     type="text" 
                     name="fullname" 
-                    className="form-input" 
+                    className="w-full p-4 rounded-lg border border-border bg-card text-txt text-sm mb-3 font-inter transition-all duration-200 focus:border-txt focus:outline-none placeholder:text-muted placeholder:font-medium" 
                     placeholder="Your Name" 
                     required 
                     value={formData.fullname}
@@ -86,18 +78,22 @@ const Contact = () => {
                 </div>
                 <textarea 
                   name="message" 
-                  className="form-input" 
+                  className="w-full p-4 rounded-lg border border-border bg-card text-txt text-sm mb-3 font-inter transition-all duration-200 focus:border-txt focus:outline-none placeholder:text-muted placeholder:font-medium min-h-[100px] resize-y" 
                   placeholder="Your Message" 
                   required 
                   value={formData.message}
                   onChange={handleInputChange}
                 />
                 <button 
-                  className="form-btn" 
+                  className={`bg-txt text-bg border-0 rounded-lg py-4 px-5 text-sm font-medium cursor-pointer transition-all duration-200 w-auto inline-flex items-center gap-2 ${
+                    !isFormValid || isSubmitting 
+                      ? 'bg-muted text-bg-secondary cursor-not-allowed' 
+                      : 'hover:-translate-y-1 hover:shadow-[0_4px_12px_rgba(255,255,255,0.1)]'
+                  }`}
                   type="submit" 
                   disabled={!isFormValid || isSubmitting}
                 >
-                  <span>{isSubmitting ? 'Opening Email...' : 'Send Message'}</span> 
+                  <span>{isSubmitting ? 'Opening Email...' : 'Send Message'}</span>
                   <span>📧</span>
                 </button>
               </form>

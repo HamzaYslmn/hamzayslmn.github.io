@@ -48,23 +48,23 @@ const Navigation = () => {
   }
 
   return (
-    <nav className={`nav ${isScrolled ? 'scrolled' : ''}`} id="navbar">
-      <div className="container">
-        <div className="nav-content">
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 border-b border-border bg-bg/95 backdrop-blur-sm ${isScrolled ? 'bg-bg/98 shadow-light' : ''}`} id="navbar">
+      <div className="max-w-container mx-auto px-6">
+        <div className="flex items-center justify-between h-20">
           <a 
             href="#top" 
-            className="nav-logo"
+            className="text-2xl font-extrabold text-txt no-underline"
             onClick={(e) => handleNavClick(e, '#top')}
           >
             Hamza Yeşilmen
           </a>
           
-          <ul className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
+          <ul className={`flex gap-8 list-none md:flex ${isMobileMenuOpen ? 'absolute top-full left-0 right-0 bg-card border border-border border-t-0 flex-col p-6 opacity-100 visible transform translate-y-0' : 'md:relative md:opacity-100 md:visible md:transform-none hidden'} transition-all duration-200`}>
             {['about', 'experience', 'projects', 'skills', 'contact'].map(section => (
               <li key={section}>
                 <a 
                   href={`#${section}`}
-                  className={activeSection === section ? 'active' : ''}
+                  className={`relative px-4 py-2 rounded-sm font-medium transition-all duration-200 hover:text-txt ${activeSection === section ? 'text-txt after:content-[""] after:absolute after:-bottom-1 after:left-1/2 after:w-full after:h-0.5 after:bg-txt after:rounded-sm after:transition-all after:duration-200 after:-translate-x-1/2' : 'after:content-[""] after:absolute after:-bottom-1 after:left-1/2 after:w-0 after:h-0.5 after:bg-txt after:rounded-sm after:transition-all after:duration-200 after:-translate-x-1/2 hover:after:w-full'}`}
                   onClick={(e) => handleNavClick(e, `#${section}`)}
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}
@@ -74,12 +74,12 @@ const Navigation = () => {
           </ul>
           
           <div 
-            className={`nav-toggle ${isMobileMenuOpen ? 'active' : ''}`}
+            className={`md:hidden flex flex-col gap-1 cursor-pointer p-2 ${isMobileMenuOpen ? 'active' : ''}`}
             onClick={toggleMobileMenu}
           >
-            <span></span>
-            <span></span>
-            <span></span>
+            <span className={`w-6 h-0.5 bg-txt rounded-sm transition-all duration-200 ${isMobileMenuOpen ? 'rotate-45 translate-x-1 translate-y-1.5' : ''}`}></span>
+            <span className={`w-6 h-0.5 bg-txt rounded-sm transition-all duration-200 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
+            <span className={`w-6 h-0.5 bg-txt rounded-sm transition-all duration-200 ${isMobileMenuOpen ? '-rotate-45 translate-x-1.5 -translate-y-1.5' : ''}`}></span>
           </div>
         </div>
       </div>

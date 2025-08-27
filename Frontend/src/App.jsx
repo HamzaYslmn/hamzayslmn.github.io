@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import Navigation from './components/Navigation.jsx'
-import Hero from './components/Hero.jsx'
+import Main from './components/Main.jsx'
 import About from './components/About.jsx'
 import Experience from './components/Experience.jsx'
 import Projects from './components/Projects.jsx'
@@ -19,26 +19,22 @@ function App() {
     const observer = new IntersectionObserver(function(entries) {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
         }
       });
     }, observerOptions);
 
-    document.querySelectorAll('.fade-in').forEach(el => {
+    // Find all elements with fade-in classes and observe them
+    const fadeElements = document.querySelectorAll('.opacity-0');
+    fadeElements.forEach(el => {
       observer.observe(el);
     });
 
     // Create particles occasionally
     const createParticle = () => {
       const particle = document.createElement('div');
-      particle.style.position = 'fixed';
-      particle.style.width = '4px';
-      particle.style.height = '4px';
-      particle.style.background = 'var(--accent)';
-      particle.style.borderRadius = '50%';
-      particle.style.pointerEvents = 'none';
-      particle.style.opacity = '0.6';
-      particle.style.zIndex = '1';
+      particle.className = 'fixed w-1 h-1 bg-accent rounded-full pointer-events-none opacity-60 z-10';
 
       const x = Math.random() * window.innerWidth;
       const y = Math.random() * window.innerHeight;
@@ -64,7 +60,7 @@ function App() {
 
     // Performance optimization: Reduce animations on low-end devices
     if (navigator.hardwareConcurrency && navigator.hardwareConcurrency < 4) {
-      document.documentElement.style.setProperty('--transition', 'all 0.2s ease');
+      document.documentElement.style.setProperty('--transition-duration', '0.1s');
     }
 
     // Cleanup
@@ -75,9 +71,9 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div className="App bg-bg text-txt font-inter overflow-x-hidden scroll-smooth">
       <Navigation />
-      <Hero />
+      <Main />
       <About />
       <Experience />
       <Projects />

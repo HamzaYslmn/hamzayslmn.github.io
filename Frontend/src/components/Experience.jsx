@@ -26,27 +26,35 @@ const Experience = () => {
   ]
 
   return (
-    <section id="experience" className="section" style={{ background: 'var(--bg-secondary)' }}>
-      <div className="container">
-        <div className="fade-in" style={{ textAlign: 'center', marginBottom: '80px' }}>
-          <h2>Professional Experience</h2>
-          <p style={{ color: 'var(--muted)', maxWidth: '600px', margin: '0 auto' }}>
+    <section id="experience" className="py-20 bg-bg-secondary">
+      <div className="max-w-container mx-auto px-6">
+        <div className="text-center mb-20 opacity-0 translate-y-8 transition-all duration-700 ease-out">
+          <h2 className="text-clamp-h2 font-bold mb-5">Professional Experience</h2>
+          <p className="text-muted max-w-2xl mx-auto leading-relaxed">
             A journey of innovation, learning, and delivering impactful solutions across various domains.
           </p>
         </div>
         
-        <div className="timeline fade-in">
+        <div className="relative pl-10 opacity-0 translate-y-8 transition-all duration-700 ease-out">
+          {/* Timeline line */}
+          <div className="absolute left-5 top-0 bottom-0 w-0.5 bg-muted"></div>
+          
           {experiences.map((exp, index) => (
-            <div key={index} className="timeline-item">
-              <div className="timeline-date">{exp.date}</div>
-              <h3 className="timeline-title">{exp.title}</h3>
-              <div className="timeline-company">{exp.company}</div>
-              <p style={{ color: 'var(--muted)', marginBottom: '16px' }}>
+            <div key={index} className="relative mb-10 p-6 bg-card border border-border rounded-default transition-all duration-200 hover:transform hover:translate-x-2 hover:border-txt">
+              {/* Timeline dot */}
+              <div className="absolute -left-8 top-7 w-3 h-3 bg-txt rounded-full border-3 border-bg"></div>
+              
+              <div className="text-muted font-semibold text-sm mb-2">{exp.date}</div>
+              <h3 className="text-xl font-bold mb-2">{exp.title}</h3>
+              <div className="text-muted mb-4 italic">{exp.company}</div>
+              <p className="text-muted mb-4 leading-relaxed">
                 {exp.description}
               </p>
-              <div className="skill-list">
+              <div className="flex flex-wrap gap-3">
                 {exp.skills.map((skill, skillIndex) => (
-                  <span key={skillIndex} className="skill-tag">{skill}</span>
+                  <span key={skillIndex} className="px-4 py-2 bg-card border border-border rounded-full text-sm font-medium transition-all duration-200 hover:bg-card-hover hover:border-txt hover:text-txt">
+                    {skill}
+                  </span>
                 ))}
               </div>
             </div>

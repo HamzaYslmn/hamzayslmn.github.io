@@ -71,45 +71,41 @@ const Projects = () => {
   }
 
   return (
-    <section id="projects" className="section">
-      <div className="container">
-        <div className="fade-in" style={{ textAlign: 'center', marginBottom: '80px' }}>
-          <h2>Featured Projects</h2>
-          <p style={{ color: 'var(--muted)', maxWidth: '600px', margin: '0 auto' }}>
+    <section id="projects" className="py-20">
+      <div className="max-w-container mx-auto px-6">
+        <div className="text-center mb-20 opacity-0 translate-y-8 transition-all duration-700 ease-out">
+          <h2 className="text-clamp-h2 font-bold mb-5">Featured Projects</h2>
+          <p className="text-muted max-w-2xl mx-auto leading-relaxed">
             A selection of projects that showcase my expertise in mechatronics, AI, and software development.
           </p>
         </div>
         
-        <div className="grid grid-auto fade-in">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 opacity-0 translate-y-8 transition-all duration-700 ease-out">
           {projects.map((project, index) => (
-            <div key={index} className="card glass card-project">
-              <div style={{ marginBottom: '24px' }}>
-                <span style={{ 
-                  background: 'var(--card-hover)', 
-                  color: 'var(--txt)', 
-                  padding: '6px 12px', 
-                  borderRadius: '20px', 
-                  fontSize: '0.8rem', 
-                  fontWeight: '600', 
-                  border: '1px solid var(--border)' 
-                }}>
+            <div key={index} className="relative overflow-hidden p-8 bg-card border border-border rounded-default transition-all duration-200 hover:bg-card-hover hover:border-border-light hover:-translate-y-1 shadow-custom group">
+              {/* Top accent line */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-txt transform scale-x-0 origin-left transition-transform duration-200 group-hover:scale-x-100"></div>
+              
+              <div className="mb-6">
+                <span className="inline-block bg-card-hover text-txt px-3 py-1.5 rounded-full text-xs font-semibold border border-border">
                   {project.status}
                 </span>
               </div>
-              <h3>{project.title}</h3>
-              <p style={{ color: 'var(--muted)', marginBottom: '20px' }}>
+              <h3 className="text-xl font-bold mb-3">{project.title}</h3>
+              <p className="text-muted mb-5 leading-relaxed">
                 {project.description}
               </p>
-              <div className="skill-list" style={{ marginBottom: '20px' }}>
+              <div className="flex flex-wrap gap-2 mb-5">
                 {project.skills.map((skill, skillIndex) => (
-                  <span key={skillIndex} className="skill-tag">{skill}</span>
+                  <span key={skillIndex} className="px-3 py-1 bg-card border border-border rounded-full text-xs font-medium transition-all duration-200 hover:bg-card-hover hover:border-txt hover:text-txt">
+                    {skill}
+                  </span>
                 ))}
               </div>
-              <div className="flex" style={{ gap: '12px' }}>
+              <div className="flex gap-3">
                 <button 
                   onClick={() => handleLinkClick(project.link)}
-                  className="btn btn-secondary" 
-                  style={{ padding: '8px 16px', fontSize: '0.9rem' }}
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-transparent text-txt border-2 border-border font-medium rounded-sm text-sm transition-all duration-200 hover:border-txt hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-txt focus:ring-opacity-50"
                 >
                   {project.linkText}
                 </button>
@@ -118,13 +114,13 @@ const Projects = () => {
           ))}
         </div>
         
-        <div style={{ textAlign: 'center', marginTop: '60px' }} className="fade-in">
-          <p style={{ color: 'var(--muted)', marginBottom: '24px' }}>
+        <div className="text-center mt-15 opacity-0 translate-y-8 transition-all duration-700 ease-out">
+          <p className="text-muted mb-6 leading-relaxed">
             Interested in seeing more of my work or discussing potential collaborations?
           </p>
           <button 
             onClick={() => window.open('https://github.com/HamzaYslmn?tab=repositories', '_blank', 'noreferrer')}
-            className="btn btn-primary"
+            className="inline-flex items-center gap-3 px-8 py-4 bg-txt text-bg font-semibold rounded-sm transition-all duration-200 hover:shadow-glow hover:scale-105 focus:outline-none focus:ring-2 focus:ring-txt focus:ring-opacity-50"
           >
             View All Projects on GitHub
             <span>↗</span>

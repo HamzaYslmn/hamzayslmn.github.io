@@ -25,29 +25,29 @@ const Footer = () => {
   ]
 
   return (
-    <footer className="footer">
-      <div className="container">
-        <div className="footer-content">
-          <div className="footer-links">
+    <footer className="bg-bg-secondary border-t border-border py-15 text-center">
+      <div className="max-w-container mx-auto px-6">
+        <div className="mb-8">
+          <div className="flex justify-center gap-8 mb-6 flex-wrap">
             {navItems.map(item => (
               <button 
                 key={item}
                 onClick={() => handleNavClick(`#${item}`)}
-                className="footer-nav-btn"
+                className="bg-transparent border-0 text-muted cursor-pointer transition-all duration-200 font-inherit text-inherit hover:text-txt"
               >
                 {item.charAt(0).toUpperCase() + item.slice(1)}
               </button>
             ))}
           </div>
           
-          <div className="social-links">
+          <div className="flex justify-center gap-4 mb-8">
             {socialLinks.map((link, index) => (
               <a 
                 key={index}
                 href={link.href} 
                 target="_blank" 
                 rel="noreferrer" 
-                className="social-link" 
+                className="w-12 h-12 bg-card border border-border rounded-xl flex items-center justify-center transition-all duration-200 hover:bg-muted hover:border-muted hover:text-bg hover:-translate-y-1 text-xl" 
                 title={link.title}
               >
                 {link.icon}
@@ -55,12 +55,12 @@ const Footer = () => {
             ))}
           </div>
           
-          <div style={{ maxWidth: '500px', margin: '0 auto' }}>
-            <p style={{ color: 'var(--muted)', marginBottom: '16px' }}>
+          <div className="max-w-lg mx-auto">
+            <p className="text-muted mb-4 leading-relaxed">
               Passionate about creating innovative solutions that bridge the gap between hardware and software. 
               Always excited to collaborate on challenging projects.
             </p>
-            <p style={{ color: 'var(--muted)', fontSize: '0.9rem' }}>
+            <p className="text-muted text-sm">
               © {currentYear} Hamza Yeşilmen. Built with modern web technologies and lots of ☕
             </p>
           </div>
