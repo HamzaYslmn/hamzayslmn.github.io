@@ -1,38 +1,20 @@
 import React from 'react'
+import { SocialLink } from './ui/index.jsx'
+import { scrollToSection } from '../utils/index.js'
+import { navigation, socialLinks, personalInfo } from '../data/config.js'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
-
-  const handleNavClick = (targetId) => {
-    const target = document.querySelector(targetId)
-    if (target) {
-      const headerOffset = 80
-      const elementPosition = target.offsetTop
-      const offsetPosition = elementPosition - headerOffset
-      
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      })
-    }
-  }
-
-  const navItems = ['about', 'experience', 'projects', 'skills', 'contact']
-  const socialLinks = [
-    { href: 'https://github.com/HamzaYslmn', icon: '📱', title: 'GitHub' },
-    { href: 'https://www.linkedin.com/in/hamzayslmn', icon: '💼', title: 'LinkedIn' },
-    { href: 'mailto:resmiyslmn@gmail.com', icon: '📧', title: 'Email' }
-  ]
 
   return (
     <footer className="bg-bg-secondary border-t border-border py-15 text-center">
       <div className="max-w-container mx-auto px-6">
         <div className="mb-8">
           <div className="flex justify-center gap-8 mb-6 flex-wrap">
-            {navItems.map(item => (
+            {navigation.map(item => (
               <button 
                 key={item}
-                onClick={() => handleNavClick(`#${item}`)}
+                onClick={() => scrollToSection(`#${item}`)}
                 className="bg-transparent border-0 text-muted cursor-pointer transition-all duration-200 font-inherit text-inherit hover:text-txt"
               >
                 {item.charAt(0).toUpperCase() + item.slice(1)}
@@ -42,16 +24,7 @@ const Footer = () => {
           
           <div className="flex justify-center gap-4 mb-8">
             {socialLinks.map((link, index) => (
-              <a 
-                key={index}
-                href={link.href} 
-                target="_blank" 
-                rel="noreferrer" 
-                className="w-12 h-12 bg-card border border-border rounded-xl flex items-center justify-center transition-all duration-200 hover:bg-muted hover:border-muted hover:text-bg hover:-translate-y-1 text-xl" 
-                title={link.title}
-              >
-                {link.icon}
-              </a>
+              <SocialLink key={index} {...link} />
             ))}
           </div>
           
@@ -61,7 +34,7 @@ const Footer = () => {
               Always excited to collaborate on challenging projects.
             </p>
             <p className="text-muted text-sm">
-              © {currentYear} Hamza Yeşilmen. Built with modern web technologies and lots of ☕
+              © {currentYear} {personalInfo.name}. Built with modern web technologies and lots of ☕
             </p>
           </div>
         </div>

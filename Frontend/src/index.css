@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .animate-in {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+  
+  .text-clamp-h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+  }
+  
+  .text-clamp-h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+}
