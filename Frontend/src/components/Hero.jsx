@@ -31,9 +31,9 @@ const Hero = () => {
           </h1>
           
           <p>
-            Passionate mechatronic engineer specializing in embedded systems, artificial intelligence, 
-            IoT solutions, and cutting-edge product development. Transforming complex ideas into 
-            scalable, real-world solutions.
+            AI and backend developer with a passion for artificial intelligence, scalable backend systems, and innovative solutions. 
+            Experienced in mechatronics, embedded systems, IoT, and cutting-edge product development. Transforming complex ideas into 
+            real-world, scalable solutions.
           </p>
           
           <div className="hero-cta">
