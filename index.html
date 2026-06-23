@@ -442,10 +442,10 @@
       form.addEventListener('submit', function (e) {
         e.preventDefault();
         if (btn.disabled) return;
-        var body = encodeURIComponent(name.value.trim() + '\n\n' + msg.value.trim());
+        var body = encodeURIComponent(name.value.trim() + '\n\n' + msg.value.trim() + '\n\n(Please do not remove this line #Contact)');
         var su = encodeURIComponent('Message from your website');
         window.open(
-          'https://mail.google.com/mail/?view=cm&fs=1&to=' + TO + '&su=' + su + '&body=' + body,
+          'https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=' + TO + '&su=' + su + '&body=' + body,
           '_blank', 'noopener'
         );
         form.reset(); refresh();
