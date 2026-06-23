@@ -1,0 +1,22 @@
+# Hamza Yeşilmen
+
+> Senior AI Engineer and Engineering Lead at Mountain AI (mountain.com.tr). 5+ years across AI, embedded systems, and backend development. Builds production LLM, RAG and AI-agent (MCP) systems, FastAPI backends, and ESP32 hardware-to-cloud products.
+
+## Profile
+- Name: Hamza Yeşilmen
+- Role: Senior AI Engineer and Engineering Lead at Mountain AI
+- Location: İskenderun, Hatay, Türkiye
+- Email: resmiyslmn@gmail.com
+- Focus: LLM, RAG, AI Agents (MCP), Voice AI, Computer Vision, FastAPI, Python, Rust, ESP32, Embedded, IoT
+
+## Highlights
+- Accepted patch merged into NVIDIA Jetson Linux (jetson-io.py fix)
+- USOM-confirmed security researcher (Türkiye National Cybersecurity Authority)
+- Creator of a popular open-source Forza DualSense project
+- Engineering Lead at Mountain AI: HireUp360, AI-assisted CAD and nesting, KromAssistant, İspatApp
+
+## Links
+- Website: https://hamzayslmn.github.io/
+- GitHub: https://github.com/HamzaYslmn
+- LinkedIn: https://www.linkedin.com/in/hamzayslmn
+- YouTube: https://www.youtube.com/@HmzaY
