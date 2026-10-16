@@ -1,4 +1,6 @@
+# Search engines and AI agents are welcome. Agent-readable profile: /llms.txt
 User-agent: *
 Allow: /
+Disallow: /temp/
 
 Sitemap: https://hamzayslmn.github.io/sitemap.xml
